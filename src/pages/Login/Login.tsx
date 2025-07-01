@@ -1,69 +1,36 @@
-import { Component } from "react";
-// import "./Login.css";
-import "../Register/Register.css";
+import React from "react";
+import "./Login.css";
 import { useNavigate } from "react-router-dom";
 
-class Login extends Component {
-  // navigate = useNavigate();
-  render() {
-    return (
-      // <>
-      //   <div className="Login">
-      //     <div className="login-container">
-      //       <h1 className="login-title">Login</h1>
-      //       <label htmlFor="username">Username</label>
-      //       <input id="username" type="text" placeholder="Enter username" />
+const Login: React.FC = () => {
+  const navigate = useNavigate();
+  return (
+    <>
+      <div className="login">
+        <div className="login-container">
+          <h1 className="login-title">Login</h1>
+          <label htmlFor="username">Username</label>
+          <input id="username" type="text" placeholder="Enter username" />
 
-      //       <label htmlFor="password">Password</label>
-      //       <input id="password" type="password" placeholder="Enter password" />
+          <label htmlFor="password">Password</label>
+          <input id="password" type="password" placeholder="Enter password" />
 
-      //       <button type="submit" className="submit-btn">
-      //         Login
-      //       </button>
+          <button type="submit" className="submit-btn">
+            Login
+          </button>
 
-      //       <p className="register-link">
-      //         Don't have an account? <a>Register Here</a>
-      //       </p>
-      //     </div>
-      //   </div>
-      // </>
-      <div className="register-container">
-        <h2 className="register-title">Create Account</h2>
-
-        <label htmlFor="username">Username</label>
-        <input id="username" type="text" placeholder="Enter your username" />
-
-        <label htmlFor="email">Email</label>
-        <input id="email" type="email" placeholder="Enter your email" />
-
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="password"
-          placeholder="Enter your password"
-        />
-
-        <label htmlFor="confirm-password">Confirm Password</label>
-        <input
-          id="confirm-password"
-          type="password"
-          placeholder="Confirm password"
-        />
-
-        <button type="submit" className="submit-btn">
-          Register
-        </button>
-
-        <p className="login-text">
-          Already have an account? <a href="#">Login</a>
-        </p>
+          <p className="register-link">
+            Don't have an account?{" "}
+            <a onClick={() => register()}>Register Here</a>
+          </p>
+        </div>
       </div>
-    );
-  }
+    </>
+  );
 
-  // register() {
-  //   this.navigate("/register");
-  // }
-}
+  function register() {
+    navigate("/register");
+  }
+};
 
 export default Login;
