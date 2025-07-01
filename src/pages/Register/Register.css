@@ -6,6 +6,10 @@
   background: linear-gradient(135deg, #667eea, #764ba2); 
 }
 
+span{
+  color: red;
+}
+
 .register-container {
   max-width: 350px;
   width: 100%;
