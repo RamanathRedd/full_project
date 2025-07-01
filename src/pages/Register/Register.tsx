@@ -8,7 +8,7 @@ const Register: React.FC = () => {
   return (
     <div className="register">
       <div className="register-container">
-        <h2 className="register-title">Create Account</h2>
+        <h2 className="register-title">Create Accounts</h2>
 
         {/* <form onSubmit={}> */}
         <label htmlFor="username">Username</label>
